@@ -93,14 +93,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const animateProgressBars = () => {
     progressBars.forEach((bar) => {
       const rect = bar.getBoundingClientRect()
-      const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0
+      const isVisible = true;
+      // const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0
 
       if (isVisible) {
         const width = bar.style.width
-        bar.style.width = "0"
-        setTimeout(() => {
-          bar.style.width = width
-        }, 100)
+        console.log(width);
+        
+        bar.style.width = width;
+        // setTimeout(() => {
+        //   bar.style.width = width
+        // }, 100)
       }
     })
   }
