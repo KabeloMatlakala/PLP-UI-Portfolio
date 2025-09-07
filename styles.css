@@ -38,7 +38,7 @@ body {
 .container {
   max-width: 1200px;
   width: 100%;
-  margin: 0 100px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -932,6 +932,45 @@ nav ul li a.active {
 
 /* Media queries for responsive design */
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .hero-text {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-height: 400px;
+    margin-top: 20px;
+  }
+
+  .typing {
+    font-size: 50px;
+  }
+
+  .biography .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bio-image img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .skills-content,
   .work-categories .container {
     flex-direction: column;
@@ -947,9 +986,93 @@ nav ul li a.active {
   .categories-grid {
     order: 2;
   }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+
+  .nav-buttons {
+    order: 2;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0 50px;
+  }
+
+  .hero-content {
+    padding-top: 50px;
+  }
+
+  .typing {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 200px;
+    text-align: center;
+  }
+
+  .biography,
+  .services,
+  .skills,
+  .work-categories,
+  .portfolio {
+    padding: 60px 0;
+  }
+
+  .section-header h2,
+  .bio-content h2,
+  .skills-info h2 {
+    font-size: 28px;
+  }
+
+  .services-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
   .categories-grid {
     grid-template-columns: 1fr;
   }
@@ -1038,27 +1161,77 @@ nav ul li a.active {
   .bio-details {
     flex-direction: column;
     gap: 15px;
+    padding: 30px 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .follow-me {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bio-content {
+    text-align: center;
   }
 }
 
 @media (max-width: 576px) {
-  .hero-text h1 {
-    font-size: 36px;
+  .container {
+    padding: 0 15px;
   }
 
-  .big-letter {
-    font-size: 200px;
+  .hero {
+    padding: 80px 0 30px;
+  }
+
+  .hero-text h3 {
+    font-size: 18px;
+  }
+
+  .typing {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
   }
 
   .section-header h2,
   .bio-content h2,
-  .contact-info h2 {
-    font-size: 28px;
+  .skills-info h2 {
+    font-size: 24px;
   }
 
   .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 180px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .service-card,
+  .portfolio-item {
+    margin-bottom: 20px;
+  }
+
+  .bio-detail h3 {
+    font-size: 36px;
+  }
+
+  .categories-image img,
+  .skills-image img {
+    height: 300px;
+  }
+
+  .work-categories {
+    padding-top: 60px;
   }
 
   .footer-info {
@@ -1072,6 +1245,13 @@ nav ul li a.active {
   .social-icon {
     width: 25px;
     height: 25px;
-    margin-left: 8px;
+    margin: 0 4px;
+  }
+
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
   }
 }
