@@ -34,6 +34,44 @@ body {
   background-size: 100px 100px;
 }
 
+/* Light theme specific overrides */
+.light-theme header.scrolled {
+  background-color: rgba(248, 250, 252, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .logo a,
+.light-theme nav ul li a,
+.light-theme .search-btn,
+.light-theme .theme-toggle {
+  color: #1a202c;
+}
+
+.light-theme nav ul li a:hover,
+.light-theme nav ul li a.active,
+.light-theme .search-btn:hover,
+.light-theme .theme-toggle:hover {
+  color: #10b981;
+}
+
+.light-theme .hero-overlay {
+  background-color: rgba(248, 250, 252, 0.9);
+}
+
+.light-theme .hero-text h3,
+.light-theme .hero-text p {
+  color: #1a202c;
+}
+
+.light-theme .typing {
+  color: rgba(26, 32, 44, 0.95);
+  -webkit-text-stroke: 1px #1a202c;
+}
+
+.light-theme .portfolio-overlay {
+  background-color: rgba(26, 32, 44, 0.8);
+}
+
 /* Common styles */
 .container {
   max-width: 1200px;

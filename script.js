@@ -30,8 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Apply saved theme if it exists
   if (savedTheme) {
-    body.className = savedTheme
+    body.classList.remove("dark-theme", "light-theme")
+    body.classList.add(savedTheme)
     updateThemeIcon(savedTheme)
+  } else {
+    // Default to dark theme if no saved preference
+    body.classList.add("dark-theme")
+    updateThemeIcon("dark-theme")
   }
 
   // Toggle theme when the button is clicked
@@ -42,13 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       body.classList.remove("dark-theme")
       body.classList.add("light-theme")
       localStorage.setItem("theme", "light-theme")
-      themeIcon.className = "fas fa-moon"
+      updateThemeIcon("light-theme")
     } else {
       // Switch to dark theme
       body.classList.remove("light-theme")
       body.classList.add("dark-theme")
       localStorage.setItem("theme", "dark-theme")
-      themeIcon.className = "fas fa-sun"
+      updateThemeIcon("dark-theme")
     }
   })
 
