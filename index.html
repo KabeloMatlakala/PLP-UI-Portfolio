@@ -15,6 +15,160 @@
     />
   </head>
   <body class="dark-theme">
+    <!-- Portfolio Maker Panel -->
+    <div id="portfolio-maker" class="portfolio-maker">
+      <div class="maker-header">
+        <h2><i class="fas fa-edit"></i> Portfolio Maker</h2>
+        <button id="toggle-maker" class="toggle-maker-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="maker-content">
+        <div class="maker-tabs">
+          <button class="tab-btn active" data-tab="personal">Personal</button>
+          <button class="tab-btn" data-tab="hero">Hero</button>
+          <button class="tab-btn" data-tab="about">About</button>
+          <button class="tab-btn" data-tab="services">Services</button>
+          <button class="tab-btn" data-tab="skills">Skills</button>
+          <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+        </div>
+
+        <!-- Personal Info Tab -->
+        <div class="tab-content active" id="personal-tab">
+          <h3>Personal Information</h3>
+          <div class="form-group">
+            <label>Site Title</label>
+            <input type="text" id="site-title" value="PLP-UI-Portfolio">
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="user-name" value="John Watson">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="user-email" value="example@email.com">
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" id="user-phone" value="+21 234 567 8901">
+          </div>
+          <div class="form-group">
+            <label>Location</label>
+            <input type="text" id="user-location" value="UK, London">
+          </div>
+        </div>
+
+        <!-- Hero Tab -->
+        <div class="tab-content" id="hero-tab">
+          <h3>Hero Section</h3>
+          <div class="form-group">
+            <label>Greeting Text</label>
+            <input type="text" id="hero-greeting" value="Hi, I'm">
+          </div>
+          <div class="form-group">
+            <label>Typing Phrases (comma separated)</label>
+            <textarea id="typing-phrases" rows="3">Freelancer, Web Designer, Web Developer, Photographer</textarea>
+          </div>
+          <div class="form-group">
+            <label>Hero Description</label>
+            <textarea id="hero-description" rows="4">I love Graphic design and Photography and have been working on my portfolio since 2016. I Can give your business a new Creative start right away!</textarea>
+          </div>
+          <div class="form-group">
+            <label>Hero Image URL</label>
+            <input type="url" id="hero-image" value="/images/banner.png">
+          </div>
+        </div>
+
+        <!-- About Tab -->
+        <div class="tab-content" id="about-tab">
+          <h3>About Section</h3>
+          <div class="form-group">
+            <label>Section Title</label>
+            <input type="text" id="about-title" value="A Lead UI Designer & Web Developer Based In UK">
+          </div>
+          <div class="form-group">
+            <label>About Description</label>
+            <textarea id="about-description" rows="4">I love Graphic design and Photography and have been working on my portfolio since 2016. I Can give your business a new Creative start right away! Contact me and we will discuss your projects!</textarea>
+          </div>
+          <div class="form-group">
+            <label>About Image URL</label>
+            <input type="url" id="about-image" value="/images/about.jpg">
+          </div>
+        </div>
+
+        <!-- Services Tab -->
+        <div class="tab-content" id="services-tab">
+          <h3>Services</h3>
+          <div class="form-group">
+            <label>Services Section Title</label>
+            <input type="text" id="services-title" value="What I Do For You">
+          </div>
+          <div id="services-list">
+            <!-- Services will be dynamically generated -->
+          </div>
+          <button class="add-btn" onclick="addService()">
+            <i class="fas fa-plus"></i> Add Service
+          </button>
+        </div>
+
+        <!-- Skills Tab -->
+        <div class="tab-content" id="skills-tab">
+          <h3>Skills</h3>
+          <div class="form-group">
+            <label>Skills Section Title</label>
+            <input type="text" id="skills-title" value="My Featured Skills">
+          </div>
+          <div class="form-group">
+            <label>Skills Description</label>
+            <textarea id="skills-description" rows="3">I Specialize in Branding and Strategy, and am passionate about creating Awesome Portfolio work. And I always ready to impress the audience with my Creativity.</textarea>
+          </div>
+          <div class="form-group">
+            <label>Skills Image URL</label>
+            <input type="url" id="skills-image" value="/images/skills.jpg">
+          </div>
+          <div id="skills-list">
+            <!-- Skills will be dynamically generated -->
+          </div>
+          <button class="add-btn" onclick="addSkill()">
+            <i class="fas fa-plus"></i> Add Skill
+          </button>
+        </div>
+
+        <!-- Portfolio Tab -->
+        <div class="tab-content" id="portfolio-tab">
+          <h3>Portfolio</h3>
+          <div class="form-group">
+            <label>Portfolio Section Title</label>
+            <input type="text" id="portfolio-title" value="My Success Work">
+          </div>
+          <div id="portfolio-list">
+            <!-- Portfolio items will be dynamically generated -->
+          </div>
+          <button class="add-btn" onclick="addPortfolioItem()">
+            <i class="fas fa-plus"></i> Add Portfolio Item
+          </button>
+        </div>
+
+        <div class="maker-actions">
+          <button class="apply-btn" onclick="applyChanges()">
+            <i class="fas fa-check"></i> Apply Changes
+          </button>
+          <button class="export-btn" onclick="exportPortfolio()">
+            <i class="fas fa-download"></i> Export HTML
+          </button>
+          <button class="reset-btn" onclick="resetToDefault()">
+            <i class="fas fa-undo"></i> Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toggle Portfolio Maker Button -->
+    <button id="open-maker" class="open-maker-btn">
+      <i class="fas fa-edit"></i>
+    </button>
+
     <header class="transparent">
       <div class="container">
         <div class="logo">
