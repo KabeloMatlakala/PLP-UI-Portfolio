@@ -113,6 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  // Portfolio Maker functionality
+  initializePortfolioMaker()
   // Run once on page load
   animateProgressBars()
 
@@ -137,9 +139,6 @@ function typeEffect() {
     charIndex--
     typingSpeed = 50 // Faster when deleting
   } else {
-    // Typing text
-    typingText.textContent = currentPhrase.substring(0, charIndex + 1)
-    charIndex++
     typingSpeed = 100 // Normal speed when typing
   }
 
@@ -161,15 +160,11 @@ function typeEffect() {
 // Start the typing effect
 setTimeout(typeEffect, 1000)
 
-// Portfolio Maker Functionality
-document.addEventListener("DOMContentLoaded", () => {
+// Portfolio Maker Functions
+function initializePortfolioMaker() {
   const portfolioMaker = document.getElementById("portfolio-maker")
   const openMakerBtn = document.getElementById("open-maker")
   const toggleMakerBtn = document.getElementById("toggle-maker")
-  const tabBtns = document.querySelectorAll(".tab-btn")
-  const tabContents = document.querySelectorAll(".tab-content")
-
-  // Initialize portfolio maker
   initializePortfolioMaker()
 
   // Open/Close portfolio maker
