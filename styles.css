@@ -1095,6 +1095,132 @@ nav ul li a.active {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* Error Messages */
+.error-message {
+  display: block;
+  color: #ff6b6b;
+  font-size: 11px;
+  margin-top: 3px;
+  min-height: 14px;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+/* Color Scheme Picker */
+.color-schemes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-scheme {
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.color-scheme.active,
+.color-scheme:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scheme-preview {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.color-scheme span {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.custom-colors {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.custom-colors h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.custom-colors input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-custom-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.apply-custom-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Notifications */
+.notification {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+.notification.success {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  color: #10b981;
+}
+
+.notification.error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #ef4444;
+}
+
+.notification.loading {
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  color: #3b82f6;
+}
 .service-item,
 .skill-item-form,
 .portfolio-item-form {
